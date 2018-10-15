@@ -1,0 +1,225 @@
+package vargovcik.peter.ataspserver.dto;
+
+import java.io.Serializable;
+import java.util.Arrays;
+
+import vargovcik.peter.ataspserver.server.SearchMode;
+
+public class CompanionAppData implements Serializable {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static int RESPONSE = 2, REQUEST = 1;
+    private boolean connectionOpen, connected, liveStreamEnabled, remoteControllEnabled, 
+    		proximitySensorsEnabled, searchPaused, headLightOn,rightHandProximityTriggered;
+    private boolean[] rgbLED;
+    private byte[] motorsCommand;
+    private int[] panTiltCommand;
+    private byte proximity;
+    private int lightSensitivity, motorPower, messageType,distance;
+    private float temperatureReading, humidityReading, atmosphericPressure;
+    private double altitude;
+    private SearchMode searchMode;
+
+    public CompanionAppData() {
+        super();
+        connectionOpen = true;
+    }
+
+    public byte[] getMotorsCommand() {
+        return motorsCommand;
+    }
+
+    public void setMotorsCommand(byte[] motorsCommand) {
+        this.motorsCommand = motorsCommand;
+    }
+
+    public int[] getPanTiltCommand() {
+        return panTiltCommand;
+    }
+
+    public void setPanTiltCommand(int[] panTiltCommand) {
+        this.panTiltCommand = panTiltCommand;
+    }
+
+    public byte getProximity() {
+        return proximity;
+    }
+
+    public void setProximity(byte proximity) {
+        this.proximity = proximity;
+    }
+
+    public int getLightSensitivity() {
+        return lightSensitivity;
+    }
+
+    public void setLightSensitivity(int lightSensitivity) {
+        this.lightSensitivity = lightSensitivity;
+    }
+
+    public int getMotorPower() {
+        return motorPower;
+    }
+
+    public void setMotorPower(int motorPower) {
+        this.motorPower = motorPower;
+    }
+
+    public float getTemperatureReading() {
+        return temperatureReading;
+    }
+
+    public void setTemperatureReading(float temperatureReading) {
+        this.temperatureReading = temperatureReading;
+    }
+
+    public float getHumidityReading() {
+        return humidityReading;
+    }
+
+    public void setHumidityReading(float humidityReading) {
+        this.humidityReading = humidityReading;
+    }
+
+    public float getAtmosphericPressure() {
+        return atmosphericPressure;
+    }
+
+    public void setAtmosphericPressure(float atmosphericPressure) {
+        this.atmosphericPressure = atmosphericPressure;
+    }
+
+    public boolean isConnectionOpen() {
+        return connectionOpen;
+    }
+
+    public void setConnectionOpen(boolean connectionOpen) {
+        this.connectionOpen = connectionOpen;
+    }
+
+    public boolean isConnected() {
+        return connected;
+    }
+
+    public void setConnected(boolean connected) {
+        this.connected = connected;
+    }
+
+    public boolean isLiveStreamEnabled() {
+        return liveStreamEnabled;
+    }
+
+    public void setLiveStreamEnabled(boolean liveStreamEnabled) {
+        this.liveStreamEnabled = liveStreamEnabled;
+    }
+
+    public boolean isRemoteControllEnabled() {
+        return remoteControllEnabled;
+    }
+
+    public void setRemoteControllEnabled(boolean remoteControllEnabled) {
+        this.remoteControllEnabled = remoteControllEnabled;
+    }
+
+    public boolean isProximitySensorsEnabled() {
+        return proximitySensorsEnabled;
+    }
+
+    public void setProximitySensorsEnabled(boolean proximitySensorsEnabled) {
+        this.proximitySensorsEnabled = proximitySensorsEnabled;
+    }
+
+    public int getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(int messageType) {
+        this.messageType = messageType;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
+
+	public double getAltitude() {
+		return altitude;
+	}
+
+	public void setAltitude(double altitude) {
+		this.altitude = altitude;
+	}
+
+	public boolean isSearchPaused() {
+		return searchPaused;
+	}
+
+	public void setSearchPaused(boolean searchPaused) {
+		this.searchPaused = searchPaused;
+	}
+
+	public SearchMode getSearchMode() {
+		return searchMode;
+	}
+
+	public void setSearchMode(SearchMode searchMode) {
+		this.searchMode = searchMode;
+	}
+
+	public boolean isHeadLightOn() {
+		return headLightOn;
+	}
+
+	public void setHeadLightOn(boolean headLightOn) {
+		this.headLightOn = headLightOn;
+	}
+
+	public boolean[] getRgbLED() {
+		return rgbLED;
+	}
+
+	public void setRgbLED(boolean[] rgbLED) {
+		this.rgbLED = rgbLED;
+	}
+
+	public boolean isRightHandProximityTriggered() {
+		return rightHandProximityTriggered;
+	}
+
+	public void setRightHandProximityTriggered(boolean rightHandProximityTriggered) {
+		this.rightHandProximityTriggered = rightHandProximityTriggered;
+	}
+
+	@Override
+	public String toString() {
+		return "CompanionAppData [connectionOpen=" + connectionOpen
+				+ ", connected=" + connected + ", liveStreamEnabled="
+				+ liveStreamEnabled + ", remoteControllEnabled="
+				+ remoteControllEnabled + ", proximitySensorsEnabled="
+				+ proximitySensorsEnabled + ", searchPaused=" + searchPaused
+				+ ", headLightOn=" + headLightOn
+				+ ", rightHandProximityTriggered="
+				+ rightHandProximityTriggered + ", rgbLED="
+				+ Arrays.toString(rgbLED) + ", motorsCommand="
+				+ Arrays.toString(motorsCommand) + ", panTiltCommand="
+				+ Arrays.toString(panTiltCommand) + ", proximity=" + proximity
+				+ ", lightSensitivity=" + lightSensitivity + ", motorPower="
+				+ motorPower + ", messageType=" + messageType + ", distance="
+				+ distance + ", temperatureReading=" + temperatureReading
+				+ ", humidityReading=" + humidityReading
+				+ ", atmosphericPressure=" + atmosphericPressure
+				+ ", altitude=" + altitude + ", searchMode=" + searchMode + "]";
+	}
+
+	
+
+	
+
+
+}
